@@ -11,9 +11,14 @@ class AppForm {
 
   refresh = () => {
     this.step++;
-    this.displayStep();
     //console.log("step: "+ this.step);
+    if (this.step <= this.form.length) //check if were on last step in the form
+      this.displayStep();
+    else
+      this.submit();
   }
+
+  submit = () => console.log('SUBMIT');
 
   displayStep = () => {  
     if(this.currentGroup) //If we have a current group, access style and hide it
