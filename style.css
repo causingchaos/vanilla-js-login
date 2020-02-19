@@ -14,3 +14,21 @@ body{
   top: calc(50% - 250px);
   left: calc(50% - 250px);
   background-color: rgba(0, 0, 0, 0.7);/*Alpha is last option -- i.e opacity*/
+  padding: 50px;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+  color: white;
+}
+
+#next-button {
+  width: 100%
+}
+
+#back-button {
+  font-size: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+#back-button:hover{
+  color: gray;
+}
