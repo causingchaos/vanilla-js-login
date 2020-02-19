@@ -8,6 +8,10 @@ body{
   background-size: cover;
 }
 
+.form-group {
+  display: none;
+}
+
 .form-container{
   width: 500px;
   position: absolute;

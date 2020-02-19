@@ -6,7 +6,7 @@ class AppForm {
 
     this.setListeners();
     this.getForm();
-    this.refresh();
+    this.refresh(); //incremenet step from 0 to 1, and update 'none' to 'block'
   }
 
   refresh = () => {
