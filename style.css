@@ -12,10 +12,18 @@ body{
   display: none;
 }
 
+#next-button:disabled {
+  cursor: not-allowed;
+}
+
+.invalid {
+  border: 2px solid red !important
+}
+
 .form-container{
   width: 500px;
   position: absolute;
-  /*top: calc(50% - 250px); */
+  top: calc(50% - 250px);
   left: calc(50% - 250px);
   background-color: rgba(0, 0, 0, 0.7);/*Alpha is last option -- i.e opacity*/
   padding: 50px;
