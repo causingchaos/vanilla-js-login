@@ -34,7 +34,27 @@ class AppForm {
     }
   }
 
-  submit = () => console.log('SUBMIT');
+  submit = () => {
+    const un = document.getElementById('email-input').value;
+    const pw = document.getElementById('password-input').value;
+
+    if (this.pageType === 'login'){
+      firebase.auth().signInWithEmailAndPassword(un,pw).then( res => {
+        document.getElementById('error-message').innerHTML = '';
+        window.location.href = '/loggedin.html#' + res.user.email;
+      }, err => {
+        document.getElementById('error-message').innerHTML = 'Incorrect Login info.'
+        console.log(err);
+      });
+    }else if (this.pageType === 'signup') {
+        //return promise (.then) and use our response
+      firebase.auth().createUserWithEmailAndPassword(un,pw).then(res => {
+        console.log(res);
+        window.location.href = '/loggedin.html#' + res.user.email;
+      })
+    }
+
+  }
 
   currentInput = () => this.form[this.step-1].input;
   previousInput = () => this.form[this.step-2].input;
